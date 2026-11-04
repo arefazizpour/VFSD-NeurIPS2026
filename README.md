@@ -8,14 +8,14 @@ Official PyTorch implementation of the paper:
 [![Conference](https://img.shields.io/badge/NeurIPS-2026%20Oral-red.svg)](https://neurips.cc/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-**Authors:** [Aref Azizpour](https://arefazizpour.github.io/)<sup>1</sup>, [Tai D. Nguyen](mailto:tdn47@drexel.edu)<sup>1</sup>, [Matthew C. Stamm](mailto:mcs382@drexel.edu)<sup>1</sup>  
+**Authors:** [Aref Azizpour](https://arefazizpour.github.io/)<sup>1</sup>, Tai D. Nguyen<sup>1</sup>, Matthew C. Stamm<sup>1</sup>  
 <sup>1</sup>Department of Electrical and Computer Engineering, Drexel University
 
 ---
 
 ## 📌 Overview
 
-![VFSD Framework Overview](assets/teaser.png)
+![VFSD Framework Overview](static/images/teaser.jpg)
 *Figure 1: Overview of the Video Forensic Self-Description (VFSD) framework.*
 
 AI-generated videos are becoming increasingly realistic, yet most detection methods focus on spatial artifacts within individual frames and require synthetic training data from known generators, causing them to fail on unseen generators. We identify two previously unexplored *temporally distributed forensic microstructures* that reveal whether a video was AI-generated. These traces arise from how a video's visual field and motion evolve over time, capturing subtle deviations that generators introduce when approximating real-world temporal dynamics.

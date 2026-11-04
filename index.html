@@ -19,13 +19,13 @@
   <meta property="og:title" content="Video Forensic Self-Descriptions: Leveraging Temporally Distributed Forensic Microstructures for Zero-Shot Detection of AI-Generated Videos">
   <meta property="og:description" content="Video Forensic Self-Descriptions (VFSD) for zero-shot detection and source attribution of AI-generated videos (NeurIPS 2026 Oral).">
   <meta property="og:url" content="https://arefazizpour.github.io/VFSD-NeurIPS2026/">
-  <meta property="og:image" content="static/images/teaser.png">
+  <meta property="og:image" content="static/images/teaser.jpg">
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Video Forensic Self-Descriptions - NeurIPS 2026 (Oral)">
   <meta name="twitter:description" content="Video Forensic Self-Descriptions (VFSD) for zero-shot detection and source attribution of AI-generated videos.">
-  <meta name="twitter:image" content="static/images/teaser.png">
+  <meta name="twitter:image" content="static/images/teaser.jpg">
 
   <!-- Academic / Citation Meta Tags -->
   <meta name="citation_title" content="Video Forensic Self-Descriptions: Leveraging Temporally Distributed Forensic Microstructures for Zero-Shot Detection of AI-Generated Videos">
@@ -157,10 +157,10 @@
                 <a href="https://arefazizpour.github.io/" target="_blank" style="font-weight: 600;">Aref Azizpour</a><sup>1</sup>,
               </span>
               <span class="author-block">
-                <a href="mailto:tdn47@drexel.edu" style="font-weight: 600;">Tai D. Nguyen</a><sup>1</sup>,
+                <span style="font-weight: 600;">Tai D. Nguyen</span><sup>1</sup>,
               </span>
               <span class="author-block">
-                <a href="mailto:mcs382@drexel.edu" style="font-weight: 600;">Matthew C. Stamm</a><sup>1</sup>
+                <span style="font-weight: 600;">Matthew C. Stamm</span><sup>1</sup>
               </span>
             </div>
 
@@ -232,10 +232,10 @@
     <div class="container is-max-desktop">
       <div class="hero-body" style="padding-top: 0;">
         <div style="background: #ffffff; padding: 12px; border-radius: 12px; box-shadow: 0 4px 18px rgba(0,0,0,0.08);">
-          <img src="static/images/teaser.png" alt="VFSD Framework Overview" style="width: 100%; height: auto; border-radius: 8px;">
+          <img src="static/images/teaser.jpg" alt="VFSD Framework Overview" style="width: 100%; height: auto; border-radius: 8px;">
         </div>
         <h2 class="subtitle has-text-justified" style="margin-top: 20px; font-size: 1.05rem; line-height: 1.6;">
-          <strong>Figure 1: Overview of the Video Forensic Self-Description (VFSD) framework.</strong> We model a video scene as a dynamic system and extract <em>temporally distributed forensic microstructures</em>. Two linear convolutional predictors ($f_I, f_O$) are trained exclusively on real video to model visual and motion evolution. 3D spatio-temporal autoregressive (AR) models fit the resulting prediction residuals to produce compact self-descriptions ($\Phi, Z$) that naturally cluster real videos, enabling zero-shot detection via Gaussian Mixture Models (GMMs) and high-accuracy source generator attribution across 35 generative models.
+          <strong>Figure 1: Overview of the Video Forensic Self-Description (VFSD) framework.</strong> We model a video scene as a dynamic system and extract <em>temporally distributed forensic microstructures</em>. Two linear convolutional predictors (visual evolution <i>f</i><sub><i>I</i></sub> and motion evolution <i>f</i><sub><i>O</i></sub>) are trained exclusively on real video to model visual and motion evolution. 3D spatio-temporal autoregressive (AR) models fit the resulting prediction residuals to produce compact self-descriptions (VE-FSD &Phi; and ME-FSD <i>Z</i>) that naturally cluster real videos, enabling zero-shot detection via Gaussian Mixture Models (GMMs) and high-accuracy source generator attribution across 35 generative models.
         </h2>
       </div>
     </div>
@@ -279,7 +279,7 @@
           <div class="box-card">
             <h4 class="title is-5"><i class="fas fa-shield-alt" style="color: #217dbb; margin-right: 8px;"></i>2. Real-Only Predictors</h4>
             <p style="font-size: 0.95rem; line-height: 1.6;">
-              Trains decoupled linear convolutional predictors ($f_I, f_O$) solely on real video to learn genuine scene physics. Once trained, they remain permanently frozen, enabling generalizable zero-shot detection without ever seeing synthetic video.
+              Trains decoupled linear convolutional predictors (<i>f</i><sub><i>I</i></sub>, <i>f</i><sub><i>O</i></sub>) solely on real video to learn genuine scene physics. Once trained, they remain permanently frozen, enabling generalizable zero-shot detection without ever seeing synthetic video.
             </p>
           </div>
         </div>
@@ -310,7 +310,7 @@
               Current video generators enforce temporal consistency using 3D convolutions and cross-frame attention mechanisms. Because these models struggle to replicate the complex, non-linear stochastic variations of real-world physics, they produce artificially smoothed, low-entropy motion trajectories.
             </p>
             <p>
-              A counterintuitive consequence is that our motion predictor $f_O$ achieves <strong>lower prediction error on synthetic videos than on real videos</strong>. As shown in the KDE plot, motion residuals of real videos exhibit substantially higher variance and energy, while AI-generated videos form tighter, artificially low-energy distributions.
+              A counterintuitive consequence is that our motion predictor (<i>f</i><sub><i>O</i></sub>) achieves <strong>lower prediction error on synthetic videos than on real videos</strong>. As shown in the KDE plot, motion residuals of real videos exhibit substantially higher variance and energy, while AI-generated videos form tighter, artificially low-energy distributions.
             </p>
           </div>
         </div>
@@ -406,7 +406,7 @@
             </thead>
             <tbody>
               <tr>
-                <td><strong>NPR</strong> (CVPR 2023)</td>
+                <td><strong>NPR</strong> (CVPR 2024)</td>
                 <td>Image-Based</td>
                 <td style="text-align: center;">0.839</td>
                 <td style="text-align: center;">0.548</td>
@@ -414,7 +414,7 @@
                 <td style="text-align: center; font-weight: 600;">0.706</td>
               </tr>
               <tr>
-                <td><strong>RINE</strong> (CVPR 2024)</td>
+                <td><strong>RINE</strong> (ECCV 2024)</td>
                 <td>Image-Based</td>
                 <td style="text-align: center;">0.744</td>
                 <td style="text-align: center;">0.825</td>
@@ -424,13 +424,13 @@
               <tr>
                 <td><strong>FSD</strong> (CVPR 2025)</td>
                 <td>Image-Based</td>
-                <td style="text-align: center;">0.999</td>
+                <td style="text-align: center;"><u>0.999</u></td>
                 <td style="text-align: center;">0.755</td>
                 <td style="text-align: center;">0.737</td>
                 <td style="text-align: center; font-weight: 600;">0.830</td>
               </tr>
               <tr style="border-top: 2px solid #cbd5e1;">
-                <td><strong>DeMamba</strong> (ECCV 2024)</td>
+                <td><strong>DeMamba</strong> (arXiv 2024)</td>
                 <td>Video-Based</td>
                 <td style="text-align: center;">0.451</td>
                 <td style="text-align: center;">0.568</td>
@@ -438,7 +438,7 @@
                 <td style="text-align: center; font-weight: 600;">0.527</td>
               </tr>
               <tr>
-                <td><strong>D3</strong> (ICLR 2025)</td>
+                <td><strong>D3</strong> (ICCV 2025)</td>
                 <td>Video-Based</td>
                 <td style="text-align: center;">0.928</td>
                 <td style="text-align: center;">0.844</td>
@@ -446,7 +446,7 @@
                 <td style="text-align: center; font-weight: 600;">0.820</td>
               </tr>
               <tr>
-                <td><strong>AIGVDet</strong> (ACM MM 2024)</td>
+                <td><strong>AIGVdet</strong> (PRCV 2024)</td>
                 <td>Video-Based</td>
                 <td style="text-align: center;">0.875</td>
                 <td style="text-align: center;">0.777</td>
@@ -454,7 +454,15 @@
                 <td style="text-align: center; font-weight: 600;">0.819</td>
               </tr>
               <tr>
-                <td><strong>Vahdati et al.</strong> (WACV 2025)</td>
+                <td><strong>FTCN</strong> (ICCV 2021)</td>
+                <td>Video-Based</td>
+                <td style="text-align: center;">0.579</td>
+                <td style="text-align: center;">0.596</td>
+                <td style="text-align: center;">0.548</td>
+                <td style="text-align: center; font-weight: 600;">0.547</td>
+              </tr>
+              <tr>
+                <td><strong>Vahdati et al.</strong> (CVPRW 2024)</td>
                 <td>Video-Based</td>
                 <td style="text-align: center;">0.868</td>
                 <td style="text-align: center;">0.770</td>
@@ -474,7 +482,7 @@
                 <td>Temporal Visual</td>
                 <td style="text-align: center;"><strong>1.000</strong></td>
                 <td style="text-align: center;">0.930</td>
-                <td style="text-align: center;">0.831</td>
+                <td style="text-align: center;"><u>0.831</u></td>
                 <td style="text-align: center; color: #1e40af;"><strong>0.920</strong></td>
               </tr>
               <tr style="background: #dbeafe; font-weight: 800;">
@@ -483,7 +491,7 @@
                 <td style="text-align: center;"><strong>1.000</strong></td>
                 <td style="text-align: center;"><strong>0.957</strong></td>
                 <td style="text-align: center;">0.791</td>
-                <td style="text-align: center; color: #1d4ed8;">0.916</td>
+                <td style="text-align: center; color: #1d4ed8;"><u>0.916</u></td>
               </tr>
             </tbody>
           </table>
@@ -511,46 +519,67 @@
               <table class="table is-fullwidth is-striped" style="font-size: 0.9rem;">
                 <thead>
                   <tr style="background: #e2e8f0;">
-                    <th>Embedding</th>
+                    <th>Embedding Method</th>
                     <th style="text-align: center;">KNN Acc.</th>
                     <th style="text-align: center;">SVM Acc.</th>
                   </tr>
                 </thead>
                 <tbody>
+                  <tr style="background: #f8fafc; font-weight: 600; font-size: 0.8rem; color: #64748b;">
+                    <td colspan="3">VISION EMBEDDINGS</td>
+                  </tr>
                   <tr>
                     <td>ResNet-50</td>
-                    <td style="text-align: center;">0.490</td>
-                    <td style="text-align: center;">0.630</td>
+                    <td style="text-align: center;">0.49</td>
+                    <td style="text-align: center;">0.63</td>
                   </tr>
                   <tr>
                     <td>CLIP-ViT</td>
-                    <td style="text-align: center;">0.650</td>
-                    <td style="text-align: center;">0.810</td>
+                    <td style="text-align: center;">0.65</td>
+                    <td style="text-align: center;">0.81</td>
                   </tr>
                   <tr>
                     <td>DINOv2</td>
-                    <td style="text-align: center;">0.540</td>
-                    <td style="text-align: center;">0.630</td>
+                    <td style="text-align: center;">0.54</td>
+                    <td style="text-align: center;">0.63</td>
                   </tr>
-                  <tr style="border-top: 2px solid #cbd5e1;">
-                    <td>NPR</td>
-                    <td style="text-align: center;">0.390</td>
-                    <td style="text-align: center;">0.830</td>
+                  <tr style="background: #f8fafc; font-weight: 600; font-size: 0.8rem; color: #64748b; border-top: 1px solid #e2e8f0;">
+                    <td colspan="3">FORENSIC EMBEDDINGS</td>
                   </tr>
                   <tr>
-                    <td>D3</td>
-                    <td style="text-align: center;">0.650</td>
-                    <td style="text-align: center;">0.820</td>
+                    <td>NPR (CVPR 2024)</td>
+                    <td style="text-align: center;">0.39</td>
+                    <td style="text-align: center;">0.83</td>
                   </tr>
                   <tr>
-                    <td>FSD</td>
-                    <td style="text-align: center;">0.610</td>
-                    <td style="text-align: center;">0.770</td>
+                    <td>D3 (ICCV 2025)</td>
+                    <td style="text-align: center;">0.65</td>
+                    <td style="text-align: center;">0.82</td>
                   </tr>
-                  <tr style="background: #dbeafe; font-weight: 800; border-top: 2px solid #93c5fd;">
-                    <td><strong>VFSD (Ours)</strong></td>
-                    <td style="text-align: center; color: #1d4ed8;"><strong>0.851</strong></td>
-                    <td style="text-align: center; color: #1d4ed8;"><strong>0.959</strong></td>
+                  <tr>
+                    <td>Vahdati et al. (CVPRW 2024)</td>
+                    <td style="text-align: center;">0.37</td>
+                    <td style="text-align: center;">0.48</td>
+                  </tr>
+                  <tr>
+                    <td>FSD (CVPR 2025)</td>
+                    <td style="text-align: center;">0.61</td>
+                    <td style="text-align: center;">0.77</td>
+                  </tr>
+                  <tr style="background: #eff6ff; font-weight: 700; border-top: 2px solid #93c5fd;">
+                    <td>ME-FSD (Ours)</td>
+                    <td style="text-align: center;">0.83</td>
+                    <td style="text-align: center;">0.95</td>
+                  </tr>
+                  <tr style="background: #eff6ff; font-weight: 700;">
+                    <td>VE-FSD (Ours)</td>
+                    <td style="text-align: center;">0.78</td>
+                    <td style="text-align: center;">0.92</td>
+                  </tr>
+                  <tr style="background: #dbeafe; font-weight: 800;">
+                    <td><strong>VFSD (Ours Combined)</strong></td>
+                    <td style="text-align: center; color: #1d4ed8;"><strong>0.85</strong></td>
+                    <td style="text-align: center; color: #1d4ed8;"><strong>0.96</strong></td>
                   </tr>
                 </tbody>
               </table>
@@ -576,10 +605,11 @@
         </button>
       </div>
       <pre id="bibtex-code" style="background: #1e293b; color: #f8fafc; border-radius: 8px; padding: 1.25rem; font-size: 0.95rem; line-height: 1.6;"><code>@inproceedings{azizpour2026video,
-  title={Video Forensic Self-Descriptions: Leveraging Temporally Distributed Forensic Microstructures for Zero-Shot Detection of AI-Generated Videos},
-  author={Azizpour, Aref and Nguyen, Tai D. and Stamm, Matthew C.},
-  booktitle={Advances in Neural Information Processing Systems (NeurIPS)},
-  year={2026}
+  title     = {Video Forensic Self-Descriptions: Leveraging Temporally Distributed Forensic Microstructures for Zero-Shot Detection of {AI}-Generated Videos},
+  author    = {Azizpour, Aref and Nguyen, Tai D. and Stamm, Matthew C.},
+  booktitle = {Advances in Neural Information Processing Systems},
+  volume    = {39},
+  year      = {2026}
 }</code></pre>
     </div>
   </section>
