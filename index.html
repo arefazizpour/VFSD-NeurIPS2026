@@ -7,7 +7,7 @@
   <!-- Primary Meta Tags -->
   <title>Video Forensic Self-Descriptions - NeurIPS 2026 (Oral)</title>
   <meta name="title" content="Video Forensic Self-Descriptions: Leveraging Temporally Distributed Forensic Microstructures for Zero-Shot Detection of AI-Generated Videos">
-  <meta name="description" content="Official project page for Video Forensic Self-Descriptions (VFSD), accepted as Oral Presentation at NeurIPS 2026.">
+  <meta name="description" content="Official project page for Video Forensic Self-Descriptions (VFSD), accepted as Oral Presentation at NeurIPS 2026. Zero-shot detection and source attribution of AI-generated videos.">
   <meta name="keywords" content="Video Forensics, AI-Generated Video Detection, Synthetic Video Detection, Zero-Shot Detection, Deepfakes, Optical Flow, Autoregressive Models, NeurIPS 2026">
   <meta name="author" content="Aref Azizpour, Tai D. Nguyen, Matthew C. Stamm">
   <meta name="robots" content="index, follow">
@@ -47,6 +47,90 @@
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   
+  <!-- Custom Styling Enhancements -->
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      color: #2c3e50;
+    }
+    .publication-title {
+      font-weight: 800 !important;
+      letter-spacing: -0.02em;
+    }
+    .publication-venue {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: #b31b1b;
+      margin-top: 10px;
+    }
+    .section-title {
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+      position: relative;
+    }
+    .section-title::after {
+      content: '';
+      display: block;
+      width: 50px;
+      height: 3px;
+      background: #3273dc;
+      margin: 8px auto 0;
+      border-radius: 2px;
+    }
+    .box-card {
+      background: #ffffff;
+      border-radius: 10px;
+      padding: 1.5rem;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.06);
+      height: 100%;
+      border-top: 4px solid #3273dc;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .box-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    }
+    .table-container-custom {
+      background: #ffffff;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+      overflow-x: auto;
+      padding: 1rem;
+    }
+    .highlight-real {
+      background-color: #f0f7ff;
+      font-weight: 600;
+    }
+    .ar-grid-table th, .ar-grid-table td {
+      text-align: center;
+      vertical-align: middle;
+      padding: 4px;
+    }
+    .ar-grid-table img {
+      width: 100%;
+      max-width: 130px;
+      border-radius: 4px;
+      border: 1px solid #e2e8f0;
+      display: block;
+      margin: 0 auto;
+    }
+    .tag-badge {
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 2px 8px;
+      border-radius: 4px;
+      text-transform: uppercase;
+    }
+    .tag-real {
+      background: #e1f5fe;
+      color: #0288d1;
+    }
+    .tag-gen {
+      background: #ffebee;
+      color: #d32f2f;
+    }
+  </style>
+
   <!-- Defer JavaScript -->
   <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script defer src="static/js/fontawesome.all.min.js"></script>
@@ -60,34 +144,37 @@
   </button>
 
   <main id="main-content">
+  <!-- Hero Section -->
   <section class="hero">
-    <div class="hero-body">
+    <div class="hero-body" style="padding-bottom: 1.5rem;">
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title" style="font-size: 2.2rem; line-height: 1.3;">Video Forensic Self-Descriptions: Leveraging Temporally Distributed Forensic Microstructures for Zero-Shot Detection of AI-Generated Videos</h1>
+            <h1 class="title is-1 publication-title" style="font-size: 2.3rem; line-height: 1.3;">Video Forensic Self-Descriptions: Leveraging Temporally Distributed Forensic Microstructures for Zero-Shot Detection of AI-Generated Videos</h1>
             
-            <div class="is-size-5 publication-authors" style="margin-top: 15px;">
+            <div class="is-size-5 publication-authors" style="margin-top: 18px;">
               <span class="author-block">
-                <a href="https://arefazizpour.github.io/" target="_blank">Aref Azizpour</a><sup>1</sup>,
+                <a href="https://arefazizpour.github.io/" target="_blank" style="font-weight: 600;">Aref Azizpour</a><sup>1</sup>,
               </span>
               <span class="author-block">
-                <a href="mailto:tdn47@drexel.edu">Tai D. Nguyen</a><sup>1</sup>,
+                <a href="mailto:tdn47@drexel.edu" style="font-weight: 600;">Tai D. Nguyen</a><sup>1</sup>,
               </span>
               <span class="author-block">
-                <a href="mailto:mcs382@drexel.edu">Matthew C. Stamm</a><sup>1</sup>
+                <a href="mailto:mcs382@drexel.edu" style="font-weight: 600;">Matthew C. Stamm</a><sup>1</sup>
               </span>
             </div>
 
-            <div class="is-size-5 publication-authors">
+            <div class="is-size-5 publication-authors" style="margin-top: 5px;">
               <span class="author-block"><sup>1</sup>Department of Electrical and Computer Engineering, Drexel University</span>
             </div>
 
-            <div class="is-size-5 publication-venue" style="margin-top: 12px; font-weight: 700; color: #b31b1b;">
-              NeurIPS 2026 (Oral Presentation)
+            <div class="publication-venue">
+              <span class="tag is-danger is-medium is-light" style="font-weight: 700; font-size: 1.1rem; border: 1px solid #f87171;">
+                🏆 NeurIPS 2026 (Oral Presentation)
+              </span>
             </div>
 
-            <div class="column has-text-centered" style="margin-top: 10px;">
+            <div class="column has-text-centered" style="margin-top: 15px;">
               <div class="publication-links">
                 <!-- Code Link -->
                 <span class="link-block">
@@ -143,10 +230,12 @@
   <!-- Teaser Section -->
   <section class="hero teaser">
     <div class="container is-max-desktop">
-      <div class="hero-body">
-        <img src="static/images/teaser.png" alt="VFSD Framework Overview" style="width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 14px rgba(0,0,0,0.08);">
-        <h2 class="subtitle has-text-justified" style="margin-top: 18px; font-size: 1.05rem; line-height: 1.6;">
-          <strong>Figure 1: Overview of the Video Forensic Self-Description (VFSD) framework.</strong> We identify temporally distributed forensic microstructures emerging from the temporal evolution of video scenes. Two linear convolutional predictors ($f_I, f_O$) are trained exclusively on real video to model visual and motion evolution. 3D spatio-temporal autoregressive (AR) models fit the resulting prediction residuals to produce compact self-descriptions ($\Phi, Z$) that naturally cluster real videos, enabling zero-shot detection via Gaussian Mixture Models (GMMs) and high-accuracy source generator attribution across 35 generative models.
+      <div class="hero-body" style="padding-top: 0;">
+        <div style="background: #ffffff; padding: 12px; border-radius: 12px; box-shadow: 0 4px 18px rgba(0,0,0,0.08);">
+          <img src="static/images/teaser.png" alt="VFSD Framework Overview" style="width: 100%; height: auto; border-radius: 8px;">
+        </div>
+        <h2 class="subtitle has-text-justified" style="margin-top: 20px; font-size: 1.05rem; line-height: 1.6;">
+          <strong>Figure 1: Overview of the Video Forensic Self-Description (VFSD) framework.</strong> We model a video scene as a dynamic system and extract <em>temporally distributed forensic microstructures</em>. Two linear convolutional predictors ($f_I, f_O$) are trained exclusively on real video to model visual and motion evolution. 3D spatio-temporal autoregressive (AR) models fit the resulting prediction residuals to produce compact self-descriptions ($\Phi, Z$) that naturally cluster real videos, enabling zero-shot detection via Gaussian Mixture Models (GMMs) and high-accuracy source generator attribution across 35 generative models.
         </h2>
       </div>
     </div>
@@ -154,12 +243,12 @@
   <!-- End Teaser Section -->
 
   <!-- Paper abstract -->
-  <section class="section hero is-light">
+  <section class="section hero is-light" style="padding: 2.5rem 1.5rem;">
     <div class="container is-max-desktop">
       <div class="columns is-centered has-text-centered">
         <div class="column is-four-fifths">
-          <h2 class="title is-3">Abstract</h2>
-          <div class="content has-text-justified" style="font-size: 1.05rem; line-height: 1.7;">
+          <h2 class="title is-3 section-title">Abstract</h2>
+          <div class="content has-text-justified" style="font-size: 1.05rem; line-height: 1.75;">
             <p>
               AI-generated videos are becoming increasingly realistic, yet most detection methods focus on spatial artifacts within individual frames and require synthetic training data from known generators, causing them to fail on unseen generators. We identify two previously unexplored <em>temporally distributed forensic microstructures</em> that reveal whether a video was AI-generated. These traces arise from how a video's visual field and motion evolve over time, capturing subtle deviations that generators introduce when approximating real-world temporal dynamics.
             </p>
@@ -174,26 +263,32 @@
   <!-- End paper abstract -->
 
   <!-- Key Contributions -->
-  <section class="section">
+  <section class="section" style="padding: 2.5rem 1.5rem;">
     <div class="container is-max-desktop">
-      <h2 class="title is-3 has-text-centered">Key Highlights & Contributions</h2>
+      <h2 class="title is-3 has-text-centered section-title">Key Contributions</h2>
       <div class="columns is-multiline" style="margin-top: 10px;">
         <div class="column is-4">
-          <div class="box" style="height: 100%;">
+          <div class="box-card">
             <h4 class="title is-5"><i class="fas fa-wave-square" style="color: #217dbb; margin-right: 8px;"></i>1. Temporal Microstructures</h4>
-            <p>Identifies a new class of forensic evidence: temporally distributed traces arising from scene evolution rather than single-frame synthesis pipelines.</p>
+            <p style="font-size: 0.95rem; line-height: 1.6;">
+              Identifies a novel class of forensic evidence: temporally distributed microstructures that emerge from deviations in how visual appearance and motion dynamics evolve across successive frames, complementing spatial single-frame artifacts.
+            </p>
           </div>
         </div>
         <div class="column is-4">
-          <div class="box" style="height: 100%;">
+          <div class="box-card">
             <h4 class="title is-5"><i class="fas fa-shield-alt" style="color: #217dbb; margin-right: 8px;"></i>2. Real-Only Predictors</h4>
-            <p>Linear convolutional predictors ($f_I, f_O$) learn real temporal dynamics once and remain frozen, ensuring generator-agnostic zero-shot generalization.</p>
+            <p style="font-size: 0.95rem; line-height: 1.6;">
+              Trains decoupled linear convolutional predictors ($f_I, f_O$) solely on real video to learn genuine scene physics. Once trained, they remain permanently frozen, enabling generalizable zero-shot detection without ever seeing synthetic video.
+            </p>
           </div>
         </div>
         <div class="column is-4">
-          <div class="box" style="height: 100%;">
+          <div class="box-card">
             <h4 class="title is-5"><i class="fas fa-cube" style="color: #217dbb; margin-right: 8px;"></i>3. 3D AR Self-Descriptions</h4>
-            <p>Jointly models spatial and cross-frame residual dependencies into compact fingerprints supporting both zero-shot detection and source attribution.</p>
+            <p style="font-size: 0.95rem; line-height: 1.6;">
+              Parameterizes spatial and cross-frame residual correlations into compact 3D autoregressive (AR) fingerprints. Each video describes its own microstructural dynamics, supporting both zero-shot outlier scoring and multi-class source attribution.
+            </p>
           </div>
         </div>
       </div>
@@ -201,17 +296,286 @@
   </section>
   <!-- End Key Contributions -->
 
+  <!-- Core Insight Section: Why Temporal Residuals Are Discriminative -->
+  <section class="section hero is-light" style="padding: 2.5rem 1.5rem;">
+    <div class="container is-max-desktop">
+      <h2 class="title is-3 has-text-centered section-title">The Physical Intuition: Artificial Smoothness</h2>
+      <div class="columns is-vcentered" style="margin-top: 10px;">
+        <div class="column is-6">
+          <div class="content has-text-justified" style="font-size: 1.05rem; line-height: 1.7;">
+            <p>
+              Why are temporal prediction residuals so discriminative between real and AI-generated video?
+            </p>
+            <p>
+              Current video generators enforce temporal consistency using 3D convolutions and cross-frame attention mechanisms. Because these models struggle to replicate the complex, non-linear stochastic variations of real-world physics, they produce artificially smoothed, low-entropy motion trajectories.
+            </p>
+            <p>
+              A counterintuitive consequence is that our motion predictor $f_O$ achieves <strong>lower prediction error on synthetic videos than on real videos</strong>. As shown in the KDE plot, motion residuals of real videos exhibit substantially higher variance and energy, while AI-generated videos form tighter, artificially low-energy distributions.
+            </p>
+          </div>
+        </div>
+        <div class="column is-6 has-text-centered">
+          <div style="background: #ffffff; padding: 12px; border-radius: 10px; box-shadow: 0 4px 14px rgba(0,0,0,0.06);">
+            <img src="static/images/flow_residual_std_kde.jpg" alt="Motion Residual Energy Distributions" style="max-width: 100%; border-radius: 6px;">
+            <p style="font-size: 0.9rem; color: #64748b; margin-top: 8px;">
+              <strong>Figure 2:</strong> Motion residual energy distributions for real vs. AI-generated video generators.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End Core Insight Section -->
+
+  <!-- Microstructural Visualizer: Figure 3 Frequency Responses -->
+  <section class="section" style="padding: 2.5rem 1.5rem;">
+    <div class="container is-max-desktop">
+      <h2 class="title is-3 has-text-centered section-title">Visualizing Forensic Microstructures</h2>
+      <p class="has-text-centered" style="font-size: 1.05rem; max-width: 800px; margin: 0 auto 1.5rem; color: #475569;">
+        By computing the 2D FFT power spectrum of the fitted 3D autoregressive self-descriptions, distinct frequency response patterns emerge across real videos and different generative pipelines.
+      </p>
+
+      <div class="table-container-custom">
+        <table class="table is-fullwidth ar-grid-table">
+          <thead>
+            <tr>
+              <th style="width: 12%;">Stream</th>
+              <th style="width: 12%;" class="highlight-real"><span class="tag-badge tag-real">Real</span><br>MIT</th>
+              <th style="width: 12%;"><span class="tag-badge tag-gen">Gen</span><br>Runway</th>
+              <th style="width: 12%;"><span class="tag-badge tag-gen">Gen</span><br>Luma AI</th>
+              <th style="width: 12%;"><span class="tag-badge tag-gen">Gen</span><br>CogVidX</th>
+              <th style="width: 12%;"><span class="tag-badge tag-gen">Gen</span><br>Midjourney</th>
+              <th style="width: 12%;"><span class="tag-badge tag-gen">Gen</span><br>Sora</th>
+              <th style="width: 12%;"><span class="tag-badge tag-gen">Gen</span><br>Mochi</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>ME-FSD</strong><br><small style="color: #64748b;">(Motion)</small></td>
+              <td class="highlight-real"><img src="static/images/ar_viz/real_motion.jpg" alt="Real ME-FSD"></td>
+              <td><img src="static/images/ar_viz/runwayml_gen3_vbench1_202407_motion.jpg" alt="Runway ME-FSD"></td>
+              <td><img src="static/images/ar_viz/luma_api_vbench1_202501_motion.jpg" alt="Luma ME-FSD"></td>
+              <td><img src="static/images/ar_viz/cogvideox1.5_vbench2_202503_motion.jpg" alt="CogVidX ME-FSD"></td>
+              <td><img src="static/images/ar_viz/midjourney_explore_202509_motion.jpg" alt="Midjourney ME-FSD"></td>
+              <td><img src="static/images/ar_viz/sora_sora.com_202506_motion.jpg" alt="Sora ME-FSD"></td>
+              <td><img src="static/images/ar_viz/mochi_1_vbench1_202411_motion.jpg" alt="Mochi ME-FSD"></td>
+            </tr>
+            <tr>
+              <td><strong>VE-FSD</strong><br><small style="color: #64748b;">(Visual)</small></td>
+              <td class="highlight-real"><img src="static/images/ar_viz/real_spatio_temporal.jpg" alt="Real VE-FSD"></td>
+              <td><img src="static/images/ar_viz/runwayml_gen3_vbench1_202407_spatio_temporal.jpg" alt="Runway VE-FSD"></td>
+              <td><img src="static/images/ar_viz/luma_api_vbench1_202501_spatio_temporal.jpg" alt="Luma VE-FSD"></td>
+              <td><img src="static/images/ar_viz/cogvideox1.5_vbench2_202503_spatio_temporal.jpg" alt="CogVidX VE-FSD"></td>
+              <td><img src="static/images/ar_viz/midjourney_explore_202509_spatio_temporal.jpg" alt="Midjourney VE-FSD"></td>
+              <td><img src="static/images/ar_viz/sora_sora.com_202506_spatio_temporal.jpg" alt="Sora VE-FSD"></td>
+              <td><img src="static/images/ar_viz/mochi_1_vbench1_202411_spatio_temporal.jpg" alt="Mochi VE-FSD"></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p style="font-size: 0.95rem; color: #475569; margin-top: 12px; text-align: justify; line-height: 1.6;">
+        <strong>Figure 3: AR coefficient frequency response spectra.</strong> Real video residuals produce broad, smoothly varying low-frequency structures reflecting natural sensor noise and model mismatch. In stark contrast, each generative model introduces distinct, higher-frequency artifacts and directional ringing that act as identifiable architectural fingerprints.
+      </p>
+    </div>
+  </section>
+  <!-- End Microstructural Visualizer -->
+
+  <!-- Quantitative Experiments Section -->
+  <section class="section hero is-light" style="padding: 2.5rem 1.5rem;">
+    <div class="container is-max-desktop">
+      <h2 class="title is-3 has-text-centered section-title">Experimental Benchmarks</h2>
+
+      <!-- Experiment 1: Zero-Shot Detection -->
+      <div style="margin-bottom: 2.5rem;">
+        <h3 class="title is-4" style="color: #1e3a8a;"><i class="fas fa-check-circle" style="color: #3b82f6; margin-right: 8px;"></i>1. Zero-Shot AI Video Detection</h3>
+        <p style="font-size: 1.05rem; line-height: 1.7; margin-bottom: 1rem;">
+          We evaluate 105 real-vs-synthetic test combinations spanning <strong>35 generative video models</strong> across three real benchmarks (Moments-in-Time, Video-ACID, and GenVideo). Competing methods utilize officially released pre-trained weights, whereas <strong>VFSD operates strictly zero-shot</strong> without observing any synthetic video during training.
+        </p>
+
+        <div class="table-container-custom">
+          <table class="table is-fullwidth is-striped is-hoverable" style="font-size: 0.95rem;">
+            <thead>
+              <tr style="background: #e2e8f0;">
+                <th>Method</th>
+                <th>Type</th>
+                <th style="text-align: center;">GenVideo (AUC)</th>
+                <th style="text-align: center;">Video-ACID (AUC)</th>
+                <th style="text-align: center;">MIT (AUC)</th>
+                <th style="text-align: center; background: #cbd5e1;">Average (AUC)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>NPR</strong> (CVPR 2023)</td>
+                <td>Image-Based</td>
+                <td style="text-align: center;">0.839</td>
+                <td style="text-align: center;">0.548</td>
+                <td style="text-align: center;">0.730</td>
+                <td style="text-align: center; font-weight: 600;">0.706</td>
+              </tr>
+              <tr>
+                <td><strong>RINE</strong> (CVPR 2024)</td>
+                <td>Image-Based</td>
+                <td style="text-align: center;">0.744</td>
+                <td style="text-align: center;">0.825</td>
+                <td style="text-align: center;"><strong>0.879</strong></td>
+                <td style="text-align: center; font-weight: 600;">0.816</td>
+              </tr>
+              <tr>
+                <td><strong>FSD</strong> (CVPR 2025)</td>
+                <td>Image-Based</td>
+                <td style="text-align: center;">0.999</td>
+                <td style="text-align: center;">0.755</td>
+                <td style="text-align: center;">0.737</td>
+                <td style="text-align: center; font-weight: 600;">0.830</td>
+              </tr>
+              <tr style="border-top: 2px solid #cbd5e1;">
+                <td><strong>DeMamba</strong> (ECCV 2024)</td>
+                <td>Video-Based</td>
+                <td style="text-align: center;">0.451</td>
+                <td style="text-align: center;">0.568</td>
+                <td style="text-align: center;">0.534</td>
+                <td style="text-align: center; font-weight: 600;">0.527</td>
+              </tr>
+              <tr>
+                <td><strong>D3</strong> (ICLR 2025)</td>
+                <td>Video-Based</td>
+                <td style="text-align: center;">0.928</td>
+                <td style="text-align: center;">0.844</td>
+                <td style="text-align: center;">0.688</td>
+                <td style="text-align: center; font-weight: 600;">0.820</td>
+              </tr>
+              <tr>
+                <td><strong>AIGVDet</strong> (ACM MM 2024)</td>
+                <td>Video-Based</td>
+                <td style="text-align: center;">0.875</td>
+                <td style="text-align: center;">0.777</td>
+                <td style="text-align: center;">0.805</td>
+                <td style="text-align: center; font-weight: 600;">0.819</td>
+              </tr>
+              <tr>
+                <td><strong>Vahdati et al.</strong> (WACV 2025)</td>
+                <td>Video-Based</td>
+                <td style="text-align: center;">0.868</td>
+                <td style="text-align: center;">0.770</td>
+                <td style="text-align: center;">0.827</td>
+                <td style="text-align: center; font-weight: 600;">0.822</td>
+              </tr>
+              <tr style="background: #eff6ff; font-weight: 700; border-top: 2px solid #93c5fd;">
+                <td><strong>ME-FSD (Ours)</strong></td>
+                <td>Temporal Motion</td>
+                <td style="text-align: center;">0.998</td>
+                <td style="text-align: center;">0.932</td>
+                <td style="text-align: center;">0.750</td>
+                <td style="text-align: center; color: #1e40af;">0.893</td>
+              </tr>
+              <tr style="background: #eff6ff; font-weight: 700;">
+                <td><strong>VE-FSD (Ours)</strong></td>
+                <td>Temporal Visual</td>
+                <td style="text-align: center;"><strong>1.000</strong></td>
+                <td style="text-align: center;">0.930</td>
+                <td style="text-align: center;">0.831</td>
+                <td style="text-align: center; color: #1e40af;"><strong>0.920</strong></td>
+              </tr>
+              <tr style="background: #dbeafe; font-weight: 800;">
+                <td><strong>VFSD (Ours Combined)</strong></td>
+                <td>Dual Stream</td>
+                <td style="text-align: center;"><strong>1.000</strong></td>
+                <td style="text-align: center;"><strong>0.957</strong></td>
+                <td style="text-align: center;">0.791</td>
+                <td style="text-align: center; color: #1d4ed8;">0.916</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Experiment 2: Source Generator Attribution -->
+      <div>
+        <h3 class="title is-4" style="color: #1e3a8a;"><i class="fas fa-fingerprint" style="color: #3b82f6; margin-right: 8px;"></i>2. Source Generator Attribution & t-SNE Clustering</h3>
+        <p style="font-size: 1.05rem; line-height: 1.7; margin-bottom: 1rem;">
+          Beyond binary detection, we test whether self-descriptions capture generator-specific fingerprints. While general vision models (CLIP, DINOv2) and spatial detectors (NPR, FSD) suffer heavy source entanglement under KNN classification, <strong>VFSD achieves 0.959 accuracy with linear SVM and 0.851 with KNN</strong> across 7 diverse sources, proving that temporal microstructures are inherently source-discriminative.
+        </p>
+
+        <div class="columns is-vcentered">
+          <div class="column is-7">
+            <div style="background: #ffffff; padding: 12px; border-radius: 10px; box-shadow: 0 4px 14px rgba(0,0,0,0.06); text-align: center;">
+              <img src="static/images/source_attribution_tsne.jpg" alt="t-SNE Source Attribution Projections" style="max-width: 100%; border-radius: 6px;">
+              <p style="font-size: 0.88rem; color: #64748b; margin-top: 8px;">
+                <strong>Figure 4:</strong> 2D t-SNE projections comparing baseline representations vs. VFSD. VFSD cleanly maps each generative source into distinct, well-separated clusters while cleanly isolating real videos.
+              </p>
+            </div>
+          </div>
+          <div class="column is-5">
+            <div class="table-container-custom" style="padding: 0.75rem;">
+              <table class="table is-fullwidth is-striped" style="font-size: 0.9rem;">
+                <thead>
+                  <tr style="background: #e2e8f0;">
+                    <th>Embedding</th>
+                    <th style="text-align: center;">KNN Acc.</th>
+                    <th style="text-align: center;">SVM Acc.</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>ResNet-50</td>
+                    <td style="text-align: center;">0.490</td>
+                    <td style="text-align: center;">0.630</td>
+                  </tr>
+                  <tr>
+                    <td>CLIP-ViT</td>
+                    <td style="text-align: center;">0.650</td>
+                    <td style="text-align: center;">0.810</td>
+                  </tr>
+                  <tr>
+                    <td>DINOv2</td>
+                    <td style="text-align: center;">0.540</td>
+                    <td style="text-align: center;">0.630</td>
+                  </tr>
+                  <tr style="border-top: 2px solid #cbd5e1;">
+                    <td>NPR</td>
+                    <td style="text-align: center;">0.390</td>
+                    <td style="text-align: center;">0.830</td>
+                  </tr>
+                  <tr>
+                    <td>D3</td>
+                    <td style="text-align: center;">0.650</td>
+                    <td style="text-align: center;">0.820</td>
+                  </tr>
+                  <tr>
+                    <td>FSD</td>
+                    <td style="text-align: center;">0.610</td>
+                    <td style="text-align: center;">0.770</td>
+                  </tr>
+                  <tr style="background: #dbeafe; font-weight: 800; border-top: 2px solid #93c5fd;">
+                    <td><strong>VFSD (Ours)</strong></td>
+                    <td style="text-align: center; color: #1d4ed8;"><strong>0.851</strong></td>
+                    <td style="text-align: center; color: #1d4ed8;"><strong>0.959</strong></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <p style="font-size: 0.9rem; color: #475569; margin-top: 10px; line-height: 1.5;">
+              Notice how KNN accuracy for baselines collapses (e.g. NPR drops from 0.830 to 0.390), indicating their features are not naturally clustered, whereas VFSD retains high accuracy (0.851) even with non-parametric nearest neighbors.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End Quantitative Experiments Section -->
+
   <!-- BibTex citation -->
-  <section class="section" id="BibTeX">
+  <section class="section" id="BibTeX" style="padding: 2.5rem 1.5rem;">
     <div class="container is-max-desktop content">
-      <div class="bibtex-header" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
-        <h2 class="title is-3" style="margin-bottom: 0;">BibTeX</h2>
+      <div class="bibtex-header" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+        <h2 class="title is-3 section-title" style="margin-bottom: 0;">BibTeX</h2>
         <button id="copy-btn" class="copy-bibtex-btn button is-small is-light" onclick="copyBibTeX()" title="Copy BibTeX to clipboard">
           <span class="icon"><i class="fas fa-copy"></i></span>
           <span class="copy-text" id="copy-btn-text">Copy</span>
         </button>
       </div>
-      <pre id="bibtex-code"><code>@inproceedings{azizpour2026video,
+      <pre id="bibtex-code" style="background: #1e293b; color: #f8fafc; border-radius: 8px; padding: 1.25rem; font-size: 0.95rem; line-height: 1.6;"><code>@inproceedings{azizpour2026video,
   title={Video Forensic Self-Descriptions: Leveraging Temporally Distributed Forensic Microstructures for Zero-Shot Detection of AI-Generated Videos},
   author={Azizpour, Aref and Nguyen, Tai D. and Stamm, Matthew C.},
   booktitle={Advances in Neural Information Processing Systems (NeurIPS)},
@@ -221,13 +585,17 @@
   </section>
   <!-- End BibTex citation -->
 
-  <footer class="footer">
+  <!-- Footer -->
+  <footer class="footer" style="padding: 2rem 1.5rem; background: #f8fafc; border-top: 1px solid #e2e8f0;">
     <div class="container">
       <div class="columns is-centered">
         <div class="column is-8 has-text-centered">
-          <div class="content">
+          <div class="content" style="font-size: 0.9rem; color: #64748b;">
             <p>
-              This website is adapted from the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a>.
+              This website is adapted from the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank" style="color: #3b82f6;">Academic Project Page Template</a>.
+            </p>
+            <p>
+              Multimedia & Information Security Laboratory (MISL) &bull; Drexel University
             </p>
           </div>
         </div>
